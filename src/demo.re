@@ -1,5 +1,3 @@
-
-
 [@bs.module "graphql-request"]
 external request : (~x:string, ~y:string) => Js.Promise.t(Js.Json.t) = "request";
 
