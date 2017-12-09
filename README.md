@@ -24,8 +24,8 @@ node src/demo.bs.js
 ## Original Js Script
 - see working example: https://runkit.com/593130bdfad7120012472003/593130bdfad7120012472004
 
+- original js example we want to convert to reason
 ```js
-original js example convertered to reason
 
 const { request } = require('graphql-request')
 
