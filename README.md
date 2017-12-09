@@ -4,6 +4,9 @@
 
 - Use `Js.Promise.t(Js.Json.t)` to wait for the Json response. Js.Json.t is the type we set the response to. Pass it to Js.Promise so reason knows to wait for it.
 
+## Resources
+
+- https://stackoverflow.com/questions/47248519/understanding-reasonml-bucklescript-externals
 
 # Build
 ```
