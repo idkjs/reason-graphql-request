@@ -8,13 +8,13 @@ var uri = "https://api.graph.cool/simple/v1/movies";
 var query = (
     `{
         Movie(title: "Inception") {
-          releaseDate
-          actors {
+            releaseDate
+            actors {
             name
-          }
+            }
         }
-      }`
-      );
+    }`
+);
 
 GraphqlRequest.request(uri, query).then((function (data) {
         return Promise.resolve((console.log(data), /* () */0));

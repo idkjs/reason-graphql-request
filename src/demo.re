@@ -8,13 +8,13 @@ let uri = "https://api.graph.cool/simple/v1/movies";
 let query = [%raw {|
     `{
         Movie(title: "Inception") {
-          releaseDate
-          actors {
+            releaseDate
+            actors {
             name
-          }
+            }
         }
-      }`
-      |}];
+    }`
+|}];
 
 request(~x=uri, ~y=query)
 |> Js.Promise.then_(
