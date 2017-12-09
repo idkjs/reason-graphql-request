@@ -3,19 +3,17 @@
 
 var GraphqlRequest = require("graphql-request");
 
-var uri = "https://api.graph.cool/simple/v1/movies";
+var uri = "https://api.graph.cool/simple/v1/cj9o4se940gsu0148s5a4helr";
 
 var query = (
-    `{
-        allCompanies($filter: String) {
-            companies: allCompanies(filter: 
-            { name_contains: $filter
-            }) {
-              id
-              name
-            }
-          }
-    }`
+    `query allCompanies($filter: String) {
+        companies: allCompanies(filter: 
+        { name_contains: $filter
+        }) {
+          id
+          name
+        }
+      }`
 );
 
 GraphqlRequest.request(uri, query).then((function (data) {
