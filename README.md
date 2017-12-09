@@ -1,6 +1,9 @@
-# Basic Reason Template
+# reason-graphql-request bindings
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+## Takeaways
+
+- Use `Js.Promise.t(Js.Json.t)` to wait for the Json response. Js.Json.t is the type we set the response to. Pass it to Js.Promise so reason knows to wait for it.
+
 
 # Build
 ```
