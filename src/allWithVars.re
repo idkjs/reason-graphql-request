@@ -6,9 +6,6 @@ type variables = Js.t({
 [@bs.module "graphql-request"]
 external request : (~uri:string, ~query:string, ~vars:variables=?) => Js.Promise.t(Js.Json.t) = "request";
 
-/* type variables = {filter: string}; */
-
-
 let uri = "https://api.graph.cool/simple/v1/cj9o4se940gsu0148s5a4helr";
 
 let query = "
@@ -21,11 +18,10 @@ let query = "
         }
       }";
   
-
 let variables = [%bs.obj {filter: "tast"}];
 
-Js.log(variables);
-  request(~uri=uri, ~query=query, ~vars=variables)
-  |> Js.Promise.then_(
-    data => Js.Promise.resolve(Js.log(data))
-  );
+/* Js.log(variables); */
+request(~uri=uri, ~query=query, ~vars=variables)
+|> Js.Promise.then_(
+  data => Js.Promise.resolve(Js.log(data))
+);

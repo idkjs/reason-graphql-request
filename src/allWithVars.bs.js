@@ -11,8 +11,6 @@ var variables = {
   filter: "tast"
 };
 
-console.log(variables);
-
 GraphqlRequest.request(uri, query, variables).then((function (data) {
         return Promise.resolve((console.log(data), /* () */0));
       }));
