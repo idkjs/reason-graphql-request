@@ -15,6 +15,8 @@ var filtering = {
   filter: "tast"
 };
 
+console.log(filtering2);
+
 console.log(filtering);
 
 GraphqlRequest.request(uri, query, filtering2).then((function (data) {

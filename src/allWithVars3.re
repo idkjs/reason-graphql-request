@@ -27,6 +27,8 @@ let filtering2 = [%bs.obj {filter: "tast"}];
 
 /* with syntax sugar on js object dec. same thing either way */
 let filtering = {"filter": "tast"};
+
+Js.log(filtering2);
 Js.log(filtering);
 /* Js.log(variables); */
 request(~uri=uri, ~query=query, ~vars=filtering2)
